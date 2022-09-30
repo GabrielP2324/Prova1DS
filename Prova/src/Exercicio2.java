@@ -6,6 +6,8 @@ public class Exercicio2 {
 		Stack<Integer> pilha1 = new Stack<Integer>();
 		Stack<Integer> pilha2 = new Stack<Integer>();
 		
+		
+		pilha1.push(null);
 		if(verificar(pilha1, pilha2)) {
 			System.out.println("as pilhas são iguais");
 		} else {
@@ -26,6 +28,8 @@ public class Exercicio2 {
 					return false;
 				}
 			}
+		}if(pilha1.size()!= pilha2.size()) {
+			return false;
 		}
 		return correct;
 	}
