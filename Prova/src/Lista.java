@@ -109,15 +109,14 @@ public class Lista {
 		No aux;
 		if (size() == 0) {
 			inserirInicio(value);
-		} else if (position == 1) {
+		} else if (position <= 1) {
 			inserirInicio(value);
-		} else if (position == size() + 1 || position>size()+1) {
+		} else if (position == (size() + 1) || position>size()+1) {
 			inserirFim(value);
 		} else {
 			while (pos != position) {
 				pos++;
 				location = location.dir;
-				
 			}
 			aux = location.esq;
 			aux.dir = temp;
